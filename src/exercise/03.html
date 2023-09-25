@@ -8,9 +8,10 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
 
   <script type="text/babel">
-    const elementClassName = 'container'
-    const elementContent = 'Hello World'
-    const element = <div className={elementClassName}>{elementContent}</div>
+    const className = 'new-container'
+    const children = 'Hello World'
+    const props = {children, className}
+    const element = <div className="container" {...props} />
     ReactDOM.createRoot(document.getElementById('root')).render(element)
   </script>
 </body>
